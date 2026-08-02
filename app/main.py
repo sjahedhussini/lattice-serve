@@ -12,3 +12,12 @@ def predict(request: PredictRequest):
             fraud_probability=score,
             model_version=model.version,
             )
+
+
+@app.get("/health")
+def health():
+    return {
+        "status":"ok",
+        "model_loaded": model is not None,
+        "model_version": model.version,
+    }
