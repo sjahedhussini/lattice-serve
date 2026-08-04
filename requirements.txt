@@ -4,3 +4,5 @@ pydantic
 numpy
 prometheus-fastapi-instrumentator
 structlog
+pytest
+httpx
